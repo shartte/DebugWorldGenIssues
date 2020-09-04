@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "debugworldgen.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "DynamicRegistryManagerMixin",
+    "RegistryOpsMixin",
+    "RegistryReadingOpsMixin",
+    "BiomeArrayMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "debugworldgen",
+  "version": "1.0.0",
+  "name": "debugworldgen",
+  "authors": [
+  ],
+  "contact": {
+  },
+  "license": "Public Domain",
+  "environment": "*",
+  "entrypoints": {
+  },
+  "mixins": [
+    "debugworldgen.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "1.16.x"
+  }
+}
