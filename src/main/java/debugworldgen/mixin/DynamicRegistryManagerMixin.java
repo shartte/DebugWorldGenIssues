@@ -17,4 +17,9 @@ public class DynamicRegistryManagerMixin {
         Thread.dumpStack();
     }
 
+    @Inject(method = "create", at = @At("RETURN"), require = 1)
+    private static void onCreate(CallbackInfoReturnable<DynamicRegistryManager.Impl> cri) {
+        Validation.validate(cri.getReturnValue());
+    }
+
 }

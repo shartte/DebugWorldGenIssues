@@ -27,10 +27,18 @@ public class Validation {
             boolean printedBiome = false;
             for (List<Supplier<ConfiguredFeature<?, ?>>> stages : biome.getGenerationSettings().getFeatures()) {
                 for (Supplier<ConfiguredFeature<?, ?>> stage : stages) {
-                    ConfiguredFeature<?, ?> cf = stage.get();
+                    ConfiguredFeature<?, ?> cf = null;
                     String error = null;
+                    try {
+                      cf = stage.get();
+                    } catch (Throwable e) {
+                        error = e.toString();
+                    }
+                    
                     if (cf == null) {
-                        error = " - NULL FEATURE ENTRY FOUND!!!";
+                        if (error == null) {
+                            error = " - NULL FEATURE ENTRY FOUND!!!";
+                        }
                     } else {
                         Identifier fid = cfs.getId(cf);
                         if (fid == null) {

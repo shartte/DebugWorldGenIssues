@@ -6,6 +6,7 @@
     "DynamicRegistryManagerMixin",
     "RegistryOpsMixin",
     "RegistryReadingOpsMixin",
+    "StructureManagerMixin",
     "BiomeArrayMixin"
   ],
   "injectors": {
